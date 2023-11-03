@@ -1,0 +1,39 @@
+.*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:rgb(49,49,49);
+}
+
+.text-stacked{
+    position: relative;
+    background-color: rgb(49,49,49);
+    line-height: 91%;
+}
+
+.text-stacked::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: -40%;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    z-index: -1;
+}
+
+.text-stacked::after{
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    bottom: -40%;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    z-index: -1;
+}
